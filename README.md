@@ -1,66 +1,67 @@
 # PerimeterOfParallelogram
 
 Explanation Line by Line:
+Import Scanner Class:
+
+java
+
+        import java.util.Scanner;
+This line imports the Scanner class from the java.util package, which is used to read input from the user.
+
 Class Declaration:
 
 java
 
-    public class ParallelogramPerimeter {
-This line declares a public class named ParallelogramPerimeter. The class is public, meaning it can be accessed from outside the package.
-
-Method to Calculate Perimeter:
-
-java
-
-    public static double calculatePerimeter(double sideA, double sideB) {
-This line declares a public static method named calculatePerimeter. The method is public, so it can be accessed from outside the class. It is static, meaning it belongs to the class itself rather than an instance of the class. The method returns a double value and takes two parameters: sideA and sideB, both of type double.
-
-Perimeter Calculation:
-
-java
-
-    return 2 * (sideA + sideB);
-This line calculates the perimeter of the parallelogram using the formula 
-2(a + b)
-
-
-2(a+b). It adds sideA and sideB, multiplies the result by 2, and returns the computed value.
-
-End of Method:
-
-java
-
-}
-This line marks the end of the calculatePerimeter method.
+        public class ParallelogramPerimeter {
+This line declares a public class named ParallelogramPerimeter.
 
 Main Method Declaration:
 
 java
 
-    public static void main(String[] args) {
-This line starts the declaration of the main method. The main method is the entry point of any Java application. It is public, static, and returns void (nothing). It takes an array of strings (String[] args) as a parameter, which can be used to pass command-line arguments to the program.
+        public static void main(String[] args) {
+This line starts the declaration of the main method, which is the entry point of the program.
 
-Example Values for Sides:
-
-java
-
-    double sideA = 5;
-    double sideB = 7;
-These lines declare and initialize two variables, sideA and sideB, with values 5 and 7, respectively. These represent the lengths of the two adjacent sides of the parallelogram.
-
-    Perimeter Calculation Call:
+Create Scanner Object:
 
 java
 
-double perimeter = calculatePerimeter(sideA, sideB);
+        Scanner in = new Scanner(System.in);
+This line creates a Scanner object named in to read input from the standard input (usually the keyboard).
+
+Prompt User for Side Lengths:
+
+java
+
+        System.out.println("Enter the length of the first side of the parallelogram:");
+        double sideA = in.nextDouble(); // Reads the input in double
+These lines prompt the user to enter the length of the first side of the parallelogram and read the input as a double.
+
+java
+
+        System.out.println("Enter the length of the second side of the parallelogram:");
+        double sideB = in.nextDouble(); // Reads the input in double
+These lines prompt the user to enter the length of the second side of the parallelogram and read the input as a double.
+
+Calculate Perimeter:
+
+
+        double perimeter = calculatePerimeter(sideA, sideB);
 This line calls the calculatePerimeter method with sideA and sideB as arguments and stores the returned value in a variable named perimeter.
 
 Print the Result:
 
 java
+    
+        System.out.println("The perimeter of the parallelogram is: " + perimeter + " units");
+This line prints the calculated perimeter to the console.
 
-    System.out.println("The perimeter of the parallelogram is: " + perimeter + " units");
-This line prints the result to the console. It uses System.out.println to output a string that includes the calculated perimeter. The + operator is used to concatenate the string with the value of perimeter.
+Close Scanner Object:
+
+java
+
+        in.close();
+This line closes the Scanner object to free up resources.
 
 End of Main Method:
 
@@ -68,6 +69,35 @@ java
 
 }
 This line marks the end of the main method.
+
+Calculate Perimeter Method:
+
+
+        private static double calculatePerimeter(double sideA, double sideB) {
+This line declares a private static method named calculatePerimeter that takes two double parameters: sideA and sideB.
+
+Perimeter Calculation:
+
+java
+
+        double perimeter = 2 * (sideA + sideB);
+This line calculates the perimeter of the parallelogram using the formula 
+
+        2(a+b).
+
+        Return the Perimeter:
+
+java
+
+        return perimeter;
+This line returns the calculated perimeter.
+
+End of Method:
+
+java
+
+}
+This line marks the end of the calculatePerimeter method.
 
 End of Class:
 
@@ -81,5 +111,67 @@ The class ParallelogramPerimeter contains two methods: calculatePerimeter and ma
 
 The calculatePerimeter method computes the perimeter of a parallelogram given the lengths of its two adjacent sides.
 
-The main method initializes the side lengths, calls calculatePerimeter to compute the perimeter, and prints the result to the console.
+The main method uses a Scanner to get the side lengths from the user, calls calculatePerimeter to compute the perimeter, and prints the result to the console.
+
+Generated by DeepSeek-V2.5
+calculatePerimeter(sideA, sideB what does this method mean
+
+The method calculatePerimeter(sideA, sideB) is a call to a method named calculatePerimeter with two arguments: sideA and sideB. Let's break down what this means in the context of the Java code provided.
+
+Method Call Breakdown:
+Method Name: calculatePerimeter
+
+This is the name of the method that will be executed. In the code, this method is defined to calculate the perimeter of a parallelogram.
+
+Arguments: sideA and sideB
+
+These are the values that are passed to the method. In this case, sideA and sideB are the lengths of the two adjacent sides of the parallelogram.
+
+Detailed Explanation:
+Method Definition:
+java
+
+    private static double calculatePerimeter(double sideA, double sideB) {
+    // Formula for the perimeter of a parallelogram
+    double perimeter = 2 * (sideA + sideB);
+    
+    // Return the calculated perimeter
+    return perimeter;
+}
+        Access Modifier: private
+
+This means the method can only be accessed within the same class.
+
+        Static Modifier: static
+
+This means the method belongs to the class itself rather than an instance of the class.
+
+Return Type: double
+
+The method returns a double value, which is the calculated perimeter.
+
+        Method Parameters: double sideA, double sideB
+
+The method takes two parameters, both of type double, representing the lengths of the two adjacent sides of the parallelogram.
+
+Method Body:
+Perimeter Calculation:
+
+java
+
+    double perimeter = 2 * (sideA + sideB);
+This line calculates the perimeter using the formula 
+
+2(a+b), where a is sideA and b is sideB.
+
+Return Statement:
+
+java
+
+return perimeter;
+This line returns the calculated perimeter value.
+
+
+
+
 
